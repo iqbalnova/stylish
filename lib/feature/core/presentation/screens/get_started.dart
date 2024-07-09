@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:stylish/routes/app_routes.dart';
 import 'package:stylish/utils/images.dart';
 import 'package:stylish/utils/styles.dart';
 
@@ -73,7 +74,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                   ),
                   child: InkWell(
                     onTap: () {
-                      // Aksi ketika di-tap
+                      Navigator.pushReplacementNamed(context, AppRoutes.main);
                     },
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
