@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stylish/feature/auth/presentation/screens/login_screen.dart';
+import 'package:stylish/feature/core/presentation/screens/get_started.dart';
 import 'package:stylish/feature/core/presentation/screens/onboarding.dart';
 import 'package:stylish/feature/core/presentation/screens/splash_screen.dart';
 import 'package:stylish/routes/app_routes.dart';
@@ -16,6 +17,8 @@ class AppRouter {
               return const LoginScreen();
             case AppRoutes.onboarding:
               return const Onboarding();
+            case AppRoutes.getStarted:
+              return const GetStartedScreen();
             default:
               return const Scaffold(
                 body: Center(
