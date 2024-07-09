@@ -14,7 +14,7 @@ Color blackColor = const Color(0xff000000);
 Color whiteColor = Colors.white;
 Color primaryColor = const Color(0xff7126B5);
 
-Color greyColor = const Color(0XFF8A8A8A);
+Color greyColor = const Color(0XFFA8A8A9);
 
 TextStyle redTextStyle = GoogleFonts.poppins(
   color: redColor,
@@ -33,3 +33,6 @@ TextStyle whiteTextStyle = GoogleFonts.poppins(
 
 TextStyle titleTextStyle = GoogleFonts.poppins(
     color: Colors.black, fontSize: 24.sp, fontWeight: FontWeight.w700);
+
+TextStyle semiBoldStyle =
+    GoogleFonts.poppins(fontSize: 16.sp, fontWeight: FontWeight.w600);

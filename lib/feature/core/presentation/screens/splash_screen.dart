@@ -22,7 +22,8 @@ class _SplashScreenState extends State<SplashScreen> {
       if (1 > 2) {
         Navigator.pushReplacementNamed(context, AppRoutes.main);
       } else {
-        Navigator.pushReplacementNamed(context, AppRoutes.login);
+        // Navigator.pushReplacementNamed(context, AppRoutes.login);
+        Navigator.pushReplacementNamed(context, AppRoutes.onboarding);
       }
     });
   }

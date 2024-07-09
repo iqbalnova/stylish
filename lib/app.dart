@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
 import 'package:stylish/routes/app_router.dart';
+import 'package:stylish/utils/styles.dart';
 
 class MyApp extends StatefulWidget {
   final GlobalKey<NavigatorState> navigatorKey;
@@ -23,6 +24,11 @@ class _MyAppState extends State<MyApp> {
           debugShowCheckedModeBanner: !kDebugMode,
           theme: ThemeData(
             useMaterial3: true,
+            scaffoldBackgroundColor: whiteColor,
+            appBarTheme: AppBarTheme(
+              backgroundColor:
+                  whiteColor, // Ubah warna app bar menjadi putih di sini
+            ),
           ),
           navigatorKey: widget.navigatorKey,
           onGenerateRoute: GetIt.instance<AppRouter>().onGenerateRoute,
