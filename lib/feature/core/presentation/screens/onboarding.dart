@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:stylish/routes/app_routes.dart';
 import 'package:stylish/utils/images.dart';
 import 'package:stylish/utils/styles.dart';
@@ -75,7 +74,7 @@ class _OnboardingState extends State<Onboarding> {
                       style: blackTextStyle.merge(semiBoldStyle),
                     ),
                     onTap: () {
-                      _pageController.jumpToPage(dummyData.length - 1);
+                      Navigator.pushReplacementNamed(context, AppRoutes.main);
                     },
                   ),
                 ],
