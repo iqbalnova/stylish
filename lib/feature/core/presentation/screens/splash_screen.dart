@@ -31,15 +31,16 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(''),
-      ),
-      body: Center(
-        child: Image.asset(
-          Images.splashLogo,
-          width: 200, // Atur lebar gambar sesuai kebutuhan Anda
-          height: 200, // Atur tinggi gambar sesuai kebutuhan Anda
-        ),
+      body: Stack(
+        children: [
+          Center(
+            child: Image.asset(
+              Images.splashLogo,
+              width: 200, // Atur lebar gambar sesuai kebutuhan Anda
+              height: 200, // Atur tinggi gambar sesuai kebutuhan Anda
+            ),
+          ),
+        ],
       ),
     );
   }
