@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Navigator.pushReplacementNamed(context, AppRoutes.main);
       } else {
         // Navigator.pushReplacementNamed(context, AppRoutes.login);
-        Navigator.pushReplacementNamed(context, AppRoutes.onboarding);
+        Navigator.pushReplacementNamed(context, AppRoutes.login);
       }
     });
   }
@@ -31,6 +31,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(''),
+      ),
       body: Stack(
         children: [
           Center(
