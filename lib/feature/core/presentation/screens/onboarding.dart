@@ -70,7 +70,7 @@ class _OnboardingState extends State<Onboarding> {
                   ),
                   InkWell(
                     child: Text(
-                      "Skip",
+                      _currentPage < dummyData.length - 1 ? 'Skip' : '',
                       style: blackTextStyle.merge(semiBoldStyle),
                     ),
                     onTap: () {
