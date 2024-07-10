@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:stylish/routes/app_routes.dart';
 import 'package:stylish/utils/images.dart';
 import 'package:stylish/utils/styles.dart';
 
@@ -169,7 +170,9 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushReplacementNamed(context, AppRoutes.login);
+              },
               child: ListTile(
                 leading: Icon(
                   Icons.message,
