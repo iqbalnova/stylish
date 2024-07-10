@@ -10,4 +10,6 @@ class Images {
   static const String iconSearch = 'assets/icons/search-icon.png';
   static const String iconSettings = 'assets/icons/settings-icon.png';
   static const String iconShopping = 'assets/icons/shopping-cart-icon.png';
+  static const String iconHamburger = 'assets/icons/hamburger-menu.png';
+  static const String iconDummyProfile = 'assets/icons/dummy-profile.png';
 }

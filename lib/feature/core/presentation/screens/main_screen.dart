@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:stylish/utils/images.dart';
 import 'package:stylish/utils/styles.dart';
 
@@ -10,6 +11,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   int _currentIndex = 0;
 
   void _setIndex(int index) {
@@ -86,26 +88,122 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: _buildFloatingActionButton(),
       bottomNavigationBar: buildBottomNavigationBar(),
       body: _buildBody(),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: ClipOval(
+            child: Image.asset(
+              Images.iconHamburger,
+              fit: BoxFit.cover,
+              height: 60.sp,
+              width: 60.sp,
+            ),
+          ),
+          onPressed: () {
+            _scaffoldKey.currentState?.openDrawer();
+          },
+        ),
+        title: Image.asset(
+          Images.splashLogo,
+          fit: BoxFit.cover,
+          height: 34.sp,
+        ),
+        centerTitle: true,
+        actions: [
+          Container(
+            margin: const EdgeInsets.only(right: 14),
+            child: IconButton(
+              icon: ClipOval(
+                child: Container(
+                  color: Colors.grey,
+                  child: Image.asset(
+                    Images.iconDummyProfile,
+                    fit: BoxFit.contain,
+                    height: 36.sp,
+                    width: 36.sp,
+                  ),
+                ),
+              ),
+              onPressed: () {
+                // Add your onPressed code here!
+              },
+            ),
+          ),
+        ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: primaryColor,
+              ),
+              child: Center(
+                child: Text(
+                  'John Doe',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24.sp,
+                  ),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {},
+              child: const ListTile(
+                leading: Icon(Icons.account_circle),
+                title: Text('Profile'),
+              ),
+            ),
+            InkWell(
+              onTap: () {},
+              child: const ListTile(
+                leading: Icon(Icons.settings),
+                title: Text('Settings'),
+              ),
+            ),
+            InkWell(
+              onTap: () {},
+              child: ListTile(
+                leading: Icon(
+                  Icons.message,
+                  color: redColor,
+                ),
+                title: Text(
+                  'Logout',
+                  style: TextStyle(
+                    color: redColor,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
   Widget _buildFloatingActionButton() {
-    Color fabColor = _currentIndex == 2 ? primaryColor : blackColor;
+    Color fabBgColor = _currentIndex == 2 ? primaryColor : whiteColor;
+    Color fabColor = _currentIndex == 2 ? whiteColor : blackColor;
 
     return FloatingActionButton(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(1000), // Ubah sesuai kebutuhan
+        borderRadius: BorderRadius.circular(1000),
       ),
       onPressed: () {
         setState(() {
           _currentIndex = 2;
         });
       },
-      backgroundColor: whiteColor,
+      backgroundColor: fabBgColor,
       child: ImageIcon(
         const AssetImage(Images.iconShopping),
         size: 30,

@@ -74,7 +74,8 @@ class _OnboardingState extends State<Onboarding> {
                       style: blackTextStyle.merge(semiBoldStyle),
                     ),
                     onTap: () {
-                      Navigator.pushReplacementNamed(context, AppRoutes.main);
+                      Navigator.pushReplacementNamed(
+                          context, AppRoutes.getStarted);
                     },
                   ),
                 ],
