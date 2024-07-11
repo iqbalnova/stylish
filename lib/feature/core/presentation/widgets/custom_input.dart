@@ -11,6 +11,7 @@ class CustomInput extends StatelessWidget {
   final int? maxLines;
   final TextInputType keyboardType;
   final IconData? prefixIcon;
+  final Decoration? decoration;
 
   const CustomInput({
     super.key,
@@ -22,6 +23,7 @@ class CustomInput extends StatelessWidget {
     this.maxLines = 1,
     this.keyboardType = TextInputType.text,
     this.prefixIcon,
+    this.decoration,
   });
 
   @override
@@ -38,12 +40,13 @@ class CustomInput extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 4.h),
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: darkGreyColor,
-              ),
-              borderRadius: BorderRadius.circular(16.r),
-            ),
+            decoration: decoration ??
+                BoxDecoration(
+                  border: Border.all(
+                    color: darkGreyColor,
+                  ),
+                  borderRadius: BorderRadius.circular(16.r),
+                ),
             child: Row(
               children: [
                 if (prefixIcon != null) _buildPrefix(),

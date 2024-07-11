@@ -32,7 +32,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   height: 20.h,
                 ),
                 CustomInput(
-                  prefixIcon: Icons.person,
+                  prefixIcon: Icons.mail,
                   hintText: 'Enter your email address',
                   controller: emailController,
                 ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:stylish/feature/home/presentation/screens/home_screen.dart';
 import 'package:stylish/routes/app_routes.dart';
 import 'package:stylish/utils/images.dart';
 import 'package:stylish/utils/styles.dart';
@@ -24,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget _buildBody() {
     switch (_currentIndex) {
       case 0:
-        return const OnDevScreen();
+        return const HomeScreen();
       case 1:
         return const OnDevScreen();
       case 2:
