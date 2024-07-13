@@ -37,4 +37,81 @@ class DummyData {
           'https://down-id.img.susercontent.com/file/sg-11134201-22120-rj7wsotjholv00',
     },
   ];
+
+  static const List<Map<String, dynamic>> featuredProductItems = [
+    {
+      "imageUrl":
+          "https://us.norton.com/content/dam/blogs/images/norton/am/how-to-make-your-computer-faster-hero.jpg",
+      "title":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": "\$10",
+    },
+    {
+      "imageUrl":
+          "https://us.norton.com/content/dam/blogs/images/norton/am/how-to-make-your-computer-faster-hero.jpg",
+      "title":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": "\$20",
+    },
+    {
+      "imageUrl":
+          "https://us.norton.com/content/dam/blogs/images/norton/am/how-to-make-your-computer-faster-hero.jpg",
+      "title":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": "\$30",
+    },
+    {
+      "imageUrl":
+          "https://us.norton.com/content/dam/blogs/images/norton/am/how-to-make-your-computer-faster-hero.jpg",
+      "title":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": "\$40",
+    },
+    {
+      "imageUrl":
+          "https://us.norton.com/content/dam/blogs/images/norton/am/how-to-make-your-computer-faster-hero.jpg",
+      "title":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": "\$50",
+    },
+    // Add more items as needed
+  ];
+
+  static const List<Map<String, dynamic>> flashSaleItems = [
+    {
+      "imageUrl":
+          "https://img.freepik.com/vecteurs-libre/gens-dessines-main-plat-shopping-illustration-vente_23-2148829747.jpg",
+      "title": "Product 1",
+      "price": "7",
+      "discount": 70
+    },
+    {
+      "imageUrl":
+          "https://img.freepik.com/vecteurs-libre/gens-dessines-main-plat-shopping-illustration-vente_23-2148829747.jpg",
+      "title": "Product 2",
+      "price": "14",
+      "discount": 70
+    },
+    {
+      "imageUrl":
+          "https://img.freepik.com/vecteurs-libre/gens-dessines-main-plat-shopping-illustration-vente_23-2148829747.jpg",
+      "title": "Product 3",
+      "price": "21",
+      "discount": 70
+    },
+    {
+      "imageUrl":
+          "https://img.freepik.com/vecteurs-libre/gens-dessines-main-plat-shopping-illustration-vente_23-2148829747.jpg",
+      "title": "Product 4",
+      "price": "28",
+      "discount": 70
+    },
+    {
+      "imageUrl":
+          "https://img.freepik.com/vecteurs-libre/gens-dessines-main-plat-shopping-illustration-vente_23-2148829747.jpg",
+      "title": "Product 5",
+      "price": "35",
+      "discount": 70
+    },
+  ];
 }
