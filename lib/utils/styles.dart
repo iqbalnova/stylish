@@ -37,3 +37,6 @@ TextStyle titleTextStyle = GoogleFonts.poppins(
 
 TextStyle semiBoldStyle =
     GoogleFonts.poppins(fontSize: 16.sp, fontWeight: FontWeight.w600);
+
+TextStyle boldStyle =
+    GoogleFonts.poppins(fontSize: 20.sp, fontWeight: FontWeight.w700);

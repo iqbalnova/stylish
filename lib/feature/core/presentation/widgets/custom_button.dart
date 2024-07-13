@@ -6,14 +6,14 @@ class CustomButton extends StatelessWidget {
   final VoidCallback? onTap;
   final String label;
   final Decoration? decoration;
-  // final TextStyle? textStyle;
+  final bool isArrowButton;
 
   const CustomButton({
     Key? key,
     required this.onTap,
     required this.label,
     this.decoration,
-    // this.textStyle,
+    this.isArrowButton = false,
   }) : super(key: key);
 
   @override
@@ -28,14 +28,42 @@ class CustomButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(6),
               color: primaryColor,
             ),
-        child: Center(
-          child: Text(
-            label,
-            // style: textStyle?.merge(whiteTextStyle) ?? whiteTextStyle,
-            style: whiteTextStyle.copyWith(
-                fontSize: 20.sp, fontWeight: FontWeight.w600),
-          ),
-        ),
+        child: isArrowButton
+            ? Container(
+                padding: EdgeInsets.all(8.sp),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: whiteColor,
+                    width: 2,
+                  ),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Center(
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        label,
+                        style: whiteTextStyle,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.arrow_forward,
+                        color: whiteColor,
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            : Center(
+                child: Text(
+                  label,
+                  style: whiteTextStyle.copyWith(
+                      fontSize: 20.sp, fontWeight: FontWeight.w600),
+                ),
+              ),
       ),
     );
   }
